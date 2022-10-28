@@ -6,14 +6,14 @@ for (i = 0; i < cantidadNotas; i++) {
     let notas = parseInt(prompt("Ingrese primera nota:" + i));
     suma = suma + notas;
 
-    if (notas <= 3) {
-        console.log("No aprobado, sin derecho a examen");
-    } else if(notas <= 6) {
-        console.log("A febrero");
-    } else if(notas <= 9) {
-        console.log("Aprobado");
-    } else if (notas <= 12) {
+    if (notas <= 12 && notas >= 10) {
         console.log("Excelente Calificacion");
+    } else if (notas <= 9 && notas >= 7) {
+        console.log("Aprobado");
+    } else if (notas >= 4 && notas <= 6) {
+        console.log("A febrero");
+    } else if (notas > 0 && notas <= 3) {
+        console.log("No aprueba, sin derecho a examen");
     } else {
         console.log("Nota incorrecta");
     }
