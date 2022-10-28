@@ -1,9 +1,10 @@
-let cantidadNotas = prompt("Ingrese la cantidad de notas:");
+let cantidadNotas;
+cantidadNotas = prompt("Ingrese la cantidad de notas:");
 let notas;
 let suma = 0;
 
-for (i = 0; i < cantidadNotas; i++) {
-    let notas = parseInt(prompt("Ingrese primera nota:" + i));
+for (i = 1; i <= cantidadNotas; i++) {
+    let notas = parseInt(prompt("Ingrese nota " + i));
     suma = suma + notas;
 
     if (notas <= 12 && notas >= 10) {
