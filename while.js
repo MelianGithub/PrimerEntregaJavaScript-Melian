@@ -22,7 +22,6 @@ while (x <= cantidadNotas) {
     }
     
 }
-// promedio = suma / (x-1);
 promedio = suma / cantidadNotas;
 
 alert("El promedio es: " + promedio);
