@@ -22,4 +22,3 @@ for (i = 1; i <= cantidadNotas; i++) {
 promedio = suma / cantidadNotas;
 
 alert("El promedio es: " + promedio);
-
