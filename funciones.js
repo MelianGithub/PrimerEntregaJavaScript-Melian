@@ -2,7 +2,7 @@ let notas;
 let promedio;
 let suma = 0;
 let x = 1;
-let cantidadNotas = prompt("Ingrese la cantidad de notas:");
+const cantidadNotas = prompt("Ingrese la cantidad de notas:");
 
 // function promedio(suma, cantidadNotas) {
     const promediar = (suma, cantidadNotas) => {
