@@ -1,27 +1,31 @@
 let notas;
 let suma = 0;
 let x= 1;
-let cantidadNotas = 0;
-cantidadNotas = prompt("Ingrese la cantidad de notas:");
+let cantidadNotas = prompt("Ingrese la cantidad de notas:");
 
-while (x <= cantidadNotas) {
+
+while (parseInt(cantidadNotas) != undefined && x <= parseInt(cantidadNotas)) {
     let notas = parseInt(prompt("Ingrese nota: " + x));
     suma = suma + notas;
     x= x + 1;
  
-    if(notas > 0 && notas <= 3) {
-        console.log("No aprobado, sin derecho a examen");
-    } else if(notas > 0 && notas <= 6) {
-        console.log("A febrero");
-    } else if(notas > 0 && notas <= 9) {
-        console.log("Aprobado");
-    } else if (notas > 0 && notas <= 12) {
-        console.log("Excelente Calificacion");
-    } else {
-        console.log("Nota incorrecta");
+    if(notas > 12){
+        console.log("nota incorrecta");
+    }else if(notas >= 10){
+        console.log("excelente nota");
+    }else if(notas >= 7){
+        console.log("aprobado");
+    } else if (notas >= 4){
+        console.log("a febrero");
+    }else if (notas >= 1){
+        console.log("no aprueba");
+    }else {
+        console.log("nota incorrecta");
     }
-    
 }
 promedio = suma / cantidadNotas;
-
-alert("El promedio es: " + promedio);
+if (promedio >= 1 && promedio <= 12){
+    alert("El promedio es: " + promedio);
+}else {
+    alert("error de promedio");
+}
