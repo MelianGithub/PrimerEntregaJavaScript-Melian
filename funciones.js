@@ -1,14 +1,16 @@
 let notas;
+let promedio;
 let suma = 0;
 let x = 1;
 let cantidadNotas = prompt("Ingrese la cantidad de notas:");
 
-function promedio(suma, cantidadNotas) {
+// function promedio(suma, cantidadNotas) {
+    const promediar = (suma, cantidadNotas) => {
     while (parseInt(cantidadNotas) != undefined && x <= parseInt(cantidadNotas)) {
         let notas = parseInt(prompt("Ingrese nota: " + x));
         suma = suma + notas;
         x = x + 1;
-        promedio = suma / cantidadNotas;
+       promedio = suma / cantidadNotas;
 
         if (notas > 12) {
             console.log("nota incorrecta");
@@ -25,7 +27,6 @@ function promedio(suma, cantidadNotas) {
         }
     }
 
-
     if (promedio >= 1 && promedio <= 12) {
         alert("El promedio es: " + promedio.toFixed(2));
     } else {
@@ -33,5 +34,5 @@ function promedio(suma, cantidadNotas) {
     }
 }
 // Llamo a la funcion
-promedio(suma, cantidadNotas);
+promediar(suma,cantidadNotas);
 
